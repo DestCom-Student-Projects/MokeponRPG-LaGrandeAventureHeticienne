@@ -600,6 +600,7 @@ def roulementDesTours(player, niv, boss,mobBoss):  # Fct qui declenche un combat
                     affichagePV(player, mokeponEnnemi, False)
                     verificationKeyCJ = 0
                 elif (choix == 'run'):
+                    annulationBonus(player)
                     print('Vous fuyez le combat !')
                     death = 'run'
                     verificationKeyCJ = 0
