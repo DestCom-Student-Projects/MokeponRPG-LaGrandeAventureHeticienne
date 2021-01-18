@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+footer {
+    position: absolute;
+    color: black;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 1px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0px;
+    font-weight: 300;
+
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 300;
+}
+
+a {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-delay: 0.2s;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+a:visited {
+    color: black;
+}
+
+.downloadButton {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.downloadButton > a {
+    color: white;
+}
+
+main > a {
+    color: white;
+    font-style: italic;
+    font-weight: 300;
+
+}
+
+main > a:hover {
+    color: white;
+}
+
+main > a:visited {
+    color: white;
+}
+
+.lin,
+.win {
+    border: solid white 1px;
+    border-radius: 25px;
+    margin: 0px;
+    padding: 20px;
+    width: 30%;
+
+}
+
+.createur {
+    margin: 20px;
+}
+
+.colonnes {
+    display: flex;
+    flex-direction: column;
+}
+
+.blocDeux {
+    display: flex;
+    justify-content: space-around;
+}
+
+.blocUn,
+.blocDeux,
+.blocTrois {
+    margin: auto;
+}
