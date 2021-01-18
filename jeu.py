@@ -76,7 +76,7 @@ def maping(player,val):
         map2(player)
         menusave(player)
         val+=1
-        magasinChoix(player)
+        magasinChoixbeta(player):
     
     if val == 3:
         map3(player)
