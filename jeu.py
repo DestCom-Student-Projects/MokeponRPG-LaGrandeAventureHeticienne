@@ -27,9 +27,9 @@ def menusave(player):
 def menu():
     print("---------------------Mokepon RPG---------------------")
     print("-----------------------------------------------------")
-    print("          1 : Crée une nouvelle partie               ")
+    print("          1 : Créer une nouvelle partie               ")
     print("          2 : Charger votre partie                   ")
-    print("          3 : A propos du jeu                        ")
+    print("          3 : À propos du jeu                        ")
     print("          4 : Fermer le jeu                          ")
     chx = input()
     if chx == '1':
