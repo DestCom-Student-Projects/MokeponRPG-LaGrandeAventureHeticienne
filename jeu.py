@@ -273,6 +273,7 @@ def auberge(player):  # Soigne le pokemon de 20pv
 def magasinChoix(player):  # Propose l'achat de potion
     verificationKey2 = 0
     potion = "none"
+    print("Tu possède", player["argent"], "crédits")
     print(
         "La potion de vie redonne 20 HP a ton mokepon, son prix est de 200 MokeDollars !\nLa potion d'attaque donne 5 points d'attaque temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nLa potion de défense donne 5 points de defense temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nQue desirez-vous faire  ?")
     achatPotion(player, choixPotion())
