@@ -356,11 +356,11 @@ def CreaMokeponEnnemi(mokeponEnnemi, niveauMonde):  # Crée un mokepon ennemi, u
     niveauMin = 6
     mokeponEnnemi["name"] = listeDeNom[random.randint(0, (len(listeDeNom) - 1))]
     if(niveauMonde == 0):
-        mokeponEnnemi["hp"] = random.randint(37, listeHp[niveauMonde])
+        mokeponEnnemi["hp"] = 45
         mokeponEnnemi["hpmax"] = mokeponEnnemi["hp"]
-        mokeponEnnemi["attaque"] = random.randint(40, listeAttaque[niveauMonde])
-        mokeponEnnemi["vitesse"] = random.randint(40, listeVitesse[niveauMonde])
-        mokeponEnnemi["defense"] = random.randint(40, listeDefense[niveauMonde])
+        mokeponEnnemi["attaque"] = 49
+        mokeponEnnemi["vitesse"] = 45
+        mokeponEnnemi["defense"] = 49
     else:
         mokeponEnnemi["hp"] = random.randint(listeHp[niveauMonde-1], listeHp[niveauMonde])
         mokeponEnnemi["hpmax"] = mokeponEnnemi["hp"]
