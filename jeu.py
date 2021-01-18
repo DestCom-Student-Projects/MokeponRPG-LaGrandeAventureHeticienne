@@ -276,7 +276,25 @@ def auberge(player):  # Soigne le pokemon de 20pv
     return player
 
 
-# magasin
+# magasin beta
+def magasinChoixbeta(player):  # Propose l'achat de potion
+    key=True
+    while key==True
+        verificationKey2 = 0
+        potion = "none"
+        print("Tu possède", player["argent"], "crédits")
+        print(
+            "La potion de vie redonne 20 HP a ton mokepon, son prix est de 200 MokeDollars !\nLa potion d'attaque donne 5 points d'attaque temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nLa potion de défense donne 5 points de defense temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nQue desirez-vous faire  ?")
+        achatPotion(player, choixPotion())
+        rachat = input("Ce sera tout ? o - oui / n - non\n")
+        if rachat == 'n':
+        print("continuez")
+        elif rachat == 'o':
+            key=False
+        else:
+            print("Pardon j'ai pas compris")
+    return player
+
 # Initiation du magasin
 def magasinChoix(player):  # Propose l'achat de potion
     verificationKey2 = 0
