@@ -2,8 +2,7 @@
 ## La Grande Aventure Heticienne
 ***
 ## Prérequis:
-Vous aurez besoin de Python 3.8.7 (ou plus récent)
-Des modules :
+Vous aurez besoin de Python 3.8.7 (ou plus récent) et des modules :
   - tqdm
   - colorama
   - pickle
