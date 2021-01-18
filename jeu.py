@@ -575,7 +575,6 @@ def roulementDesTours(player, niv, boss,mobBoss):  # Fct qui declenche un combat
         mokeponEnnemi["defense"] = listeDefense[mobBoss]
         mokeponEnnemi["niveau"] = niveauBoss
         mokeponEnnemi["xp"] = mokeponEnnemi["niveau"] * mokeponEnnemi["niveau"] * mokeponEnnemi["niveau"]
-        return mokeponEnnemi
     else:
         CreaMokeponEnnemi(mokeponEnnemi, niv)
 
@@ -589,7 +588,8 @@ def roulementDesTours(player, niv, boss,mobBoss):  # Fct qui declenche un combat
         tours = 1
 
     if (boss):
-        print("afficher ici phrase du boss et ses mokepon")
+        print("AH! Tu as fini par arriver jusqu'a moi, JAMAIS TU NE ME VAINCRA MINABLE")
+        textApparitionEnnemi(mokeponEnnemi)
     else:
         interactionEnnemi()
         textApparitionEnnemi(mokeponEnnemi)
