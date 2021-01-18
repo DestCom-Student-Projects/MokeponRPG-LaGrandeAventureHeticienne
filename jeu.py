@@ -76,7 +76,7 @@ def maping(player,val):
         map2(player)
         menusave(player)
         val+=1
-        magasinChoixbeta(player):
+        magasinChoixbeta(player)
     
     if val == 3:
         map3(player)
@@ -137,7 +137,7 @@ def random_area():
            "Une ville abandonnée du nom de Woolhanne se dresse devant vous, faites attention !",
            "Un pont suspendu est droit devant faites gaffe a vos pas pour pas faire craquer le pont",
            "Une incroyable cascade d'eau vous apparait, ne glissez pas sur les rochers"]
-    i=random.randint(0,len(value))
+    i=random.randint(0,len(value)-1)
     print(value[i])
     print("---------------------------")
     time.sleep(1)
@@ -279,7 +279,7 @@ def auberge(player):  # Soigne le pokemon de 20pv
 # magasin beta
 def magasinChoixbeta(player):  # Propose l'achat de potion
     key=True
-    while key==True
+    while key==True:
         verificationKey2 = 0
         potion = "none"
         print("Tu possède", player["argent"], "crédits")
@@ -288,7 +288,7 @@ def magasinChoixbeta(player):  # Propose l'achat de potion
         achatPotion(player, choixPotion())
         rachat = input("Ce sera tout ? o - oui / n - non\n")
         if rachat == 'n':
-        print("continuez")
+            print("continuez")
         elif rachat == 'o':
             key=False
         else:
