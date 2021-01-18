@@ -497,11 +497,11 @@ def attaqueJoueurs(player,
     if mokeponEnnemi["hp"] <= 0:
         if ((player["mokepon"]["niveau"] + 1) <= player["mokepon"]["niveaumax"]):
             addXp(player, mokeponEnnemi)
-            if (player["mokepon"]["niveau"] >= 16):
+            if (player["mokepon"]["niveau"] == 16):
                 augmentationStats(player, 0)
-            if (player["mokepon"]["niveau"] >= 36):
+            if (player["mokepon"]["niveau"] == 36):
                 augmentationStats(player, 1)
-            if (player["mokepon"]["niveau"] >= 40):
+            if (player["mokepon"]["niveau"] == 40):
                 augmentationStats(player, 2)
             print("Ce combat t'as fait gagné", monnaieGagner(player), "Mokedollars !")
         return "IA-Dead"
