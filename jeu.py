@@ -78,7 +78,7 @@ def maping(player,val):
         map3(player)
     elif val == 4:
         print("Bienvenue a Honk Ponk, une boutique est disponible souhaitez vous y  aller \n o - Oui n - Non//")
-        chx = int(input())
+        chx = input()
         while token==True:
             if chx == "o":
                 magasinChoix(player)
