@@ -343,7 +343,7 @@ def annulationBonus(player):  # Remet les stats du mokepon a la normale
 def mokeponChoice(mokepon):  # Ajoute le nom, et les stats du mokepon du joueur
     verificationKey = 0
     listeDeNomMkpn = ["Andynosaur", "Abysscyan", "Cagdosse"]
-    print("Laisse mon te présenter ton futur compagnon,")
+    print("Laisse-moi te présenter ton futur compagnon,")
     print("Andynosaur, le mokepon dinosaure !")
     print("Abysscyan, le mokepon flottant !")
     print("Cagdosse, le pokemon calcium !")
