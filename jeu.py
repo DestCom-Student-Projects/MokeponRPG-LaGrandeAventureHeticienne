@@ -136,7 +136,7 @@ def random_area():
 
 def intro(name):  # OK
     print("Bienvenue à toi", name,
-          "!\nTon aventure ne fais que de commencer et pourtant nous comptons déjà sur toi car aujourd'hui dans le monde des moképon sévis une atroce maladie véhiculé par un bandit de la région, l'horrible Corvid.\nPour t'aider dans ta quête afin de sauver notre monde, je vais t'offrir ton premier moképon ! \nChoisis le bien, ils ont tous leurs forces et faiblesses et tu ne pourra pas le changer une fois ton choix fait.")
+          "!\nTon aventure ne fait que commencer et pourtant nous comptons déjà sur toi, car aujourd'hui dans le monde des moképon sévit une atroce maladie véhiculée par un bandit de la région, l'horrible Corvid.\nPour t'aider dans ta quête afin de sauver notre monde, je vais t'offrir ton premier moképon ! \nChoisis-le bien, ils ont tous leurs forces et faiblesses et tu ne pourras pas le changer une fois ton choix fait.")
     time.sleep(1)
 
 
