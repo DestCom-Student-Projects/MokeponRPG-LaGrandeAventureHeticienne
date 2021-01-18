@@ -230,7 +230,7 @@ def felicitation():
 def interactionEnnemi():  # Genere un phrase de provoque de l'ia adverse
     nomDres = ['P-A', 'Joao-vc, le canard', 'Julien laperceuse', 'Anthoriz, le fils du soleil levant', 'Ouati bé',
                'Maitre Pims le tenor', 'John Weak, le surpuissant', 'Jean Damien le rapide', 'NekFat, le rapide',
-               'Manu Micron, le bon eleve', 'Cyril Hamdoula, animateur', 'Meerajh Kalifa, la spéléologue']
+               'Manu Micron, le bon eleve', 'Cyril Hamdoula, animateur', 'Meerajh Kalifa, la spéléologue', 'Antoine, le pdf']
     MiseEnGardeDres = ["J'aime les shorts, ça garde mes genoux bien au frais",
                        "Ha ha ! Je crois que tu as besoin d'un peu d'échauffement !", "C'que t'es faible! Hahaha!",
                        "Tiens? Quelle bonne surprise, tu es là aussi?! Eh ben... Allez, viens prendre ta baffe, minable!",
