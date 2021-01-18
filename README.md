@@ -1,4 +1,4 @@
-# MokeponRPG
+# Mokepon RPG
 ## La Grande Aventure Heticienne
 ***
 ## Prérequis:
