@@ -684,6 +684,7 @@ def a13(player):
     clear_aff()
     print("Vous êtes sur la route 901")
     random_area()
+    print("Vous avez trouver une potion ! Waow :o")
     ajoutPotion(player, "soin")
 
     acc = MenuDirection(False, True, False, True)
@@ -814,6 +815,7 @@ def d23(player):
     clear_aff()
     print("Vous êtes sur la route 902")
     random_area()
+    print("Vous avez trouver une potion ! Waow :o")
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, True, False)  # haut droite
     if acc == '1':
@@ -942,6 +944,7 @@ def b33(player):
     clear_aff()
     print("Vous êtes sur la route 903")
     random_area()
+    print("Vous avez trouver une potion ! Waow :o")
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
@@ -1034,6 +1037,7 @@ def a44(player):
     clear_aff()
     print("Vous êtes sur la route 904")
     random_area()
+    print("Vous avez trouver un EASTER EGG ! Waow :o")
     rickroll()
     MenuDirection(False, True, False, False)  # bas
     b44(player)
@@ -1058,6 +1062,7 @@ def d44(player):
     clear_aff()
     print("Vous êtes sur la route 904")
     random_area()
+    print("Vous avez trouver une potion ! Waow :o")
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '1':
@@ -1146,6 +1151,7 @@ def b55(player):
     clear_aff()
     print("Vous êtes sur la route 905")
     random_area()
+    print("Vous avez trouver une potion ! Waow :o")
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, False, True)  # gauche haut
     if acc == '4':
@@ -1282,6 +1288,7 @@ def e63(player):  # special path
     clear_aff()
     print("Vous êtes sur la route 906")
     random_area()
+    print("Vous avez trouver une potion ! Waow :o")
     ajoutPotion(player, "soin")
     MenuDirection(True, False, False, False)
     d63(player)
@@ -1343,6 +1350,7 @@ def b65(player):
     clear_aff()
     print("Vous êtes sur la route 906")
     random_area()
+    print("Vous avez trouver une potion ! Waow :o")
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
