@@ -81,13 +81,13 @@ def maping(player,val):
         chx = int(input())
         while token==True:
             if chx == "o":
-            magasinChoix(player)
-            token=False
+                magasinChoix(player)
+                token=False
             elif chx =="n":
-            print("Vous continuez votre chemin.")
-            token=False
+                print("Vous continuez votre chemin.")
+                token=False
             else:
-            print("Quoi ? Je n'ai pas compris ?")
+                print("Quoi ? Je n'ai pas compris ?")
         
         map4(player)
     elif val == 5:
