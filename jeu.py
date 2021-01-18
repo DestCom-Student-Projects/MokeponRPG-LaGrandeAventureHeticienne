@@ -14,16 +14,14 @@ def clear_aff():
 
 
 def printsave():
-    print("-----------------------------------------------------\n | Appuyez sur | s - Pour Sauvegarder | q - Pour quitter | ")
+    print("-----------------------------------------------------\n | Appuyez sur | s - Pour Sauvegarder et quitter | c - Pour continuer | ")
 
 def menusave(player):
     printsave()
     val = input()
     if val == 's':
         pickle.dump(player, open("save.p", "wb"))
-    if val == 'q':
-        sys.exit()
-    else:
+    if val == 'c':
         return val
 
 def menu():
@@ -94,12 +92,14 @@ def maping(player,val):
 
 def game(player,progress):
 
-
+    i=1
     if progress == 0:
         auberge(player)  # a mettre toute les 2maps + b4 boss
         magasinChoix(player)  # a mettre entre r3/r4 + r7/r8 avec un message pour le dernier shop
         maping(player,1)
-
+        while i < 8:
+            maping(player,i)
+            i+=1
     else:
         maping(player,progress)
 
@@ -433,7 +433,6 @@ def augmentationStats(player, evo):  # Amelioration des stats du mokepon suite a
     player["mokepon"]["vitessemax"] = listVit[evo]
     player["mokepon"]["defense"] = listDfs[evo]
     player["mokepon"]["defensemax"] = listDfs[evo]
-    player["mokepon"]["hp"] = soin(player["mokepon"]["hp"], player["mokepon"]["hpmax"])
     print("Félicitation, ton moképon évolue niveau", player["mokepon"]["niveau"], "il a desormais", player["mokepon"]["attaque"], "point d'attaques",player["mokepon"]["defense"], "points de défense et ",player["mokepon"]["hp"], "points de vie")
 
 
@@ -661,12 +660,14 @@ def MenuDirection(n, s, e, w):
 
 def a11(player):
     clear_aff()
+    print("Vous êtes sur la route 901")
     random_area()
     MenuDirection(False, False, True, False)
 
 
 def a12(player):
     clear_aff()
+    print("Vous êtes sur la route 901")
     random_area()
     gm=roulementDesTours(player,0,False,0)
     if gm=="G-0":
@@ -681,6 +682,7 @@ def a12(player):
 
 def a13(player):
     clear_aff()
+    print("Vous êtes sur la route 901")
     random_area()
     ajoutPotion(player, "soin")
 
@@ -692,6 +694,7 @@ def a13(player):
 
 def b13(player):
     clear_aff()
+    print("Vous êtes sur la route 901")
     random_area()
     # event ?
     acc = MenuDirection(True, True, False, False)
@@ -702,6 +705,7 @@ def b13(player):
 
 def c13(player):
     clear_aff()
+    print("Vous êtes sur la route 901")
     random_area()
     gm=roulementDesTours(player,0,False,0)
     if gm=="G-0":
@@ -716,6 +720,7 @@ def c13(player):
 
 def c14(player):
     clear_aff()
+    print("Vous êtes sur la route 901")
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)
@@ -726,6 +731,7 @@ def c14(player):
 
 def c15(player):
     clear_aff()
+    print("Vous êtes sur la route 901")
     random_area()
     gm=roulementDesTours(player,0,False,0)
     if gm=="G-0":
@@ -757,6 +763,7 @@ def map1(player):
 
 def b21(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     gm=roulementDesTours(player,1,False,0)
     if gm=="G-0":
@@ -768,6 +775,7 @@ def b21(player):
 
 def b22(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -778,6 +786,7 @@ def b22(player):
 
 def b23(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     gm=roulementDesTours(player,1,False,0)
     if gm=="G-0":
@@ -792,6 +801,7 @@ def b23(player):
 
 def c23(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     # event ?
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -802,6 +812,7 @@ def c23(player):
 
 def d23(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, True, False)  # haut droite
@@ -812,6 +823,7 @@ def d23(player):
 
 def d24(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -822,6 +834,7 @@ def d24(player):
 
 def d25(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     # event ?
     acc = MenuDirection(True, False, False, True)  # haut gauche
@@ -832,6 +845,7 @@ def d25(player):
 
 def c25(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     gm=roulementDesTours(player,1,False,0)
     if gm=="G-0":
@@ -846,6 +860,7 @@ def c25(player):
 
 def b25(player):
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     # event ?
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -856,6 +871,7 @@ def b25(player):
 
 def a25(player):  # end of road
     clear_aff()
+    print("Vous êtes sur la route 902")
     random_area()
     gm=roulementDesTours(player,1,False,0)
     if gm=="G-0":
@@ -890,6 +906,7 @@ def map2(player):
 
 def c31(player):
     clear_aff()
+    print("Vous êtes sur la route 903")
     random_area()
     gm=roulementDesTours(player,2,False,0)
     if gm=="G-0":
@@ -901,6 +918,7 @@ def c31(player):
 
 def c32(player):
     clear_aff()
+    print("Vous êtes sur la route 903")
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)
@@ -911,6 +929,7 @@ def c32(player):
 
 def c33(player):
     clear_aff()
+    print("Vous êtes sur la route 903")
     random_area()
     # event
     acc = MenuDirection(True, False, False, True)
@@ -921,6 +940,7 @@ def c33(player):
 
 def b33(player):
     clear_aff()
+    print("Vous êtes sur la route 903")
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
@@ -931,6 +951,7 @@ def b33(player):
 
 def a33(player):
     clear_aff()
+    print("Vous êtes sur la route 903")
     random_area()
     gm=roulementDesTours(player,2,False,0)
     if gm=="G-0":
@@ -960,6 +981,7 @@ def map3(player):
 
 def b41(player):
     clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     gm=roulementDesTours(player,3,False,0)
     if gm=="G-0":
@@ -971,6 +993,7 @@ def b41(player):
 
 def b42(player):
     clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -981,6 +1004,7 @@ def b42(player):
 
 def b43(player):
     clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     # event
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -991,6 +1015,7 @@ def b43(player):
 
 def b44(player):
     clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     gm=roulementDesTours(player,3,False,0)
     if gm=="G-0":
@@ -1006,6 +1031,8 @@ def b44(player):
 
 
 def a44(player):
+    clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     rickroll()
     MenuDirection(False, True, False, False)  # bas
@@ -1014,6 +1041,7 @@ def a44(player):
 
 def c44(player):
     clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     gm=roulementDesTours(player,3,False,0)
     if gm=="G-0":
@@ -1028,6 +1056,7 @@ def c44(player):
 
 def d44(player):
     clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -1038,6 +1067,7 @@ def d44(player):
 
 def e44(player):  # end of road
     clear_aff()
+    print("Vous êtes sur la route 904")
     random_area()
     # event3
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -1065,6 +1095,7 @@ def map4(player):
 
 def b51(player):
     clear_aff()
+    print("Vous êtes sur la route 905")
     random_area()
     # event
     MenuDirection(False, False, True, False)  # droite
@@ -1072,6 +1103,7 @@ def b51(player):
 
 def b52(player):
     clear_aff()
+    print("Vous êtes sur la route 905")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1086,6 +1118,7 @@ def b52(player):
 
 def b53(player):
     clear_aff()
+    print("Vous êtes sur la route 905")
     random_area()
     # event
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -1096,6 +1129,7 @@ def b53(player):
 
 def b54(player):
     clear_aff()
+    print("Vous êtes sur la route 905")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1110,6 +1144,7 @@ def b54(player):
 
 def b55(player):
     clear_aff()
+    print("Vous êtes sur la route 905")
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, False, True)  # gauche haut
@@ -1120,6 +1155,7 @@ def b55(player):
 
 def a55(player):
     clear_aff()
+    print("Vous êtes sur la route 905")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1134,6 +1170,7 @@ def a55(player):
 
 def mb55(player):  # end of road
     clear_aff()
+    print("Vous êtes sur la route 905")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1165,6 +1202,7 @@ def map5(player):
 
 def c61(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     # event
     MenuDirection(True, False, False, False)
@@ -1172,6 +1210,7 @@ def c61(player):
 
 def b61(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1187,6 +1226,7 @@ def b61(player):
 
 def b62(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     # event
     acc = MenuDirection(False, False, True, True)
@@ -1197,6 +1237,7 @@ def b62(player):
 
 def b63(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1211,6 +1252,7 @@ def b63(player):
 
 def c63(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     # event
     acc = MenuDirection(True, True, False, False)
@@ -1221,6 +1263,7 @@ def c63(player):
 
 def d63(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1237,6 +1280,7 @@ def d63(player):
 
 def e63(player):  # special path
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     ajoutPotion(player, "soin")
     MenuDirection(True, False, False, False)
@@ -1245,6 +1289,7 @@ def e63(player):  # special path
 
 def d64(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1259,6 +1304,7 @@ def d64(player):
 
 def d65(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     # event
     acc = MenuDirection(True, True, False, True)
@@ -1271,6 +1317,7 @@ def d65(player):
 
 def e65(player):  # special path
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1283,6 +1330,7 @@ def e65(player):  # special path
 
 def c65(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     # event
     acc = MenuDirection(True, True, False, False)
@@ -1293,6 +1341,7 @@ def c65(player):
 
 def b65(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
@@ -1303,6 +1352,7 @@ def b65(player):
 
 def a65(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     gm=roulementDesTours(player,4,False,0)
     if gm=="G-0":
@@ -1317,6 +1367,7 @@ def a65(player):
 
 def a66(player):
     clear_aff()
+    print("Vous êtes sur la route 906")
     random_area()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
