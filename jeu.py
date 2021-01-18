@@ -247,7 +247,6 @@ def interactionEnnemi():  # Genere un phrase de provoque de l'ia adverse
 def auberge(player):  # Soigne le pokemon de 20pv
     player["mokepon"]["hp"] = soin(player["mokepon"]["hp"], player["mokepon"]["hpmax"])
     print("Votre", player["mokepon"]["name"], "s'est bien reposé, il a desormais", player["mokepon"]["hp"], "pv!")
-    print(player["mokepon"]["hp"])
     return player
 
 
