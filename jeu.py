@@ -700,6 +700,7 @@ def a12(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -739,6 +740,7 @@ def c13(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, False, True, False)
     if acc == '1':
@@ -765,6 +767,7 @@ def c15(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -797,6 +800,7 @@ def b21(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     MenuDirection(False, False, True, False)  # droite
 
@@ -820,6 +824,7 @@ def b23(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, True, False, True)  # gauche bas
     if acc == '4':
@@ -880,6 +885,7 @@ def c25(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -906,6 +912,7 @@ def a25(player):  # end of road
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -941,6 +948,7 @@ def c31(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     MenuDirection(False, False, True, False)
 
@@ -987,6 +995,7 @@ def a33(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
@@ -1017,6 +1026,7 @@ def b41(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     MenuDirection(False, False, True, False)  # droite
 
@@ -1051,6 +1061,7 @@ def b44(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, False, True)  # haut bas gauche
     if acc == '4':
@@ -1078,6 +1089,7 @@ def c44(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '1':
@@ -1141,6 +1153,7 @@ def b52(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -1167,6 +1180,7 @@ def b54(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -1194,6 +1208,7 @@ def a55(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -1209,6 +1224,7 @@ def mb55(player):  # end of road
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -1249,6 +1265,7 @@ def b61(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
 
     acc = MenuDirection(False, True, True, False)
@@ -1276,6 +1293,7 @@ def b63(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, True, False, True)
     if acc == '4':
@@ -1302,6 +1320,7 @@ def d63(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(True, True, True, False)
     if acc == '1':
@@ -1329,6 +1348,7 @@ def d64(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -1357,6 +1377,7 @@ def e65(player):  # special path
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     MenuDirection(True, False, False, False)
     d65(player)
@@ -1393,6 +1414,7 @@ def a65(player):
     if gm=="G-0":
         print("Game Over - Trop faible pour ce jeu ?")
         briller()
+        time.sleep(3)
         sys.exit()
     acc = MenuDirection(False, True, True, False)
     if acc == '2':
@@ -1438,6 +1460,7 @@ def boss(player):
         if gm=="G-0":
             print("Game Over - Trop faible pour ce jeu ?")
             briller()
+            time.sleep(3)
             sys.exit()
         i+=1
     felicitation()
