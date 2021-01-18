@@ -75,9 +75,11 @@ def maping(player,val):
         map2(player)
         val+=1
         magasinChoix(player)
+    menusave(player)
     if val == 3:
         map3(player)
         val+=1
+    menusave(player)
     if val == 4:
         print("Bienvenue a Honk Ponk, une boutique est disponible souhaitez vous y  aller \n o - Oui n - Non//")
         chx = input()
@@ -97,6 +99,7 @@ def maping(player,val):
     if val == 5:
         map5(player)
         val+=1
+    menusave(player)
     if val == 6:
         map6(player)
         val+=1
