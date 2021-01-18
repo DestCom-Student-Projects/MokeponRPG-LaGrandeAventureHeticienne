@@ -210,6 +210,17 @@ def rickroll():
     print('Ho non ! Un cul-de-sac !')
     website="https://destroykeaum.alwaysdata.net/assets/other/addon/rickroll.mp4"
     webbrowser.open_new_tab(website)
+    
+    
+def briller():
+    print('Perdu lol enjoy')
+    website = "https://destroykeaum.alwaysdata.net/assets/other/addon/briller.mp4"
+    webbrowser.open_new_tab(website)
+  
+def felicitation():
+    print("Félicitation tu as vaincu le grand Corvid !")
+    website = "https://destroykeaum.alwaysdata.net/assets/other/addon/victory.mp4"
+    webbrowser.open_new_tab(website)
 
 
 def interactionEnnemi():  # Genere un phrase de provoque de l'ia adverse
