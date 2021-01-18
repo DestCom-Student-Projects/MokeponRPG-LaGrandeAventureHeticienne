@@ -137,7 +137,7 @@ def random_area():
            "Une ville abandonnée du nom de Woolhanne se dresse devant vous, faites attention !",
            "Un pont suspendu est droit devant faites gaffe a vos pas pour pas faire craquer le pont",
            "Une incroyable cascade d'eau vous apparait, ne glissez pas sur les rochers"]
-    i=random.randint(0,6)
+    i=random.randint(0,len(value))
     print(value[i])
     print("---------------------------")
     time.sleep(1)
