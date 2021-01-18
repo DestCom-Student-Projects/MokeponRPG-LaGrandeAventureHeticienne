@@ -642,14 +642,19 @@ def MenuDirection(n, s, e, w):
 #########################################################   MAP1
 
 def a11(player):
+    clear_aff()
     random_area()
     MenuDirection(False, False, True, False)
 
 
 def a12(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,0,False,0)
-
+    gm=roulementDesTours(player,0,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
         a11(player)
@@ -657,6 +662,7 @@ def a12(player):
 
 
 def a13(player):
+    clear_aff()
     random_area()
     ajoutPotion(player, "soin")
 
@@ -667,9 +673,9 @@ def a13(player):
 
 
 def b13(player):
+    clear_aff()
     random_area()
     # event ?
-
     acc = MenuDirection(True, True, False, False)
     if acc == '1':
         a13(player)
@@ -677,9 +683,13 @@ def b13(player):
 
 
 def c13(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,0,False,0)
-    1
+    gm=roulementDesTours(player,0,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, False, True, False)
     if acc == '1':
         b13(player)
@@ -687,6 +697,7 @@ def c13(player):
 
 
 def c14(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)
@@ -696,8 +707,13 @@ def c14(player):
 
 
 def c15(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,0,False,0)
+    gm=roulementDesTours(player,0,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
         c14(player)
@@ -722,12 +738,18 @@ def map1(player):
 #########################################################   MAP2
 
 def b21(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,1,False,0)
+    gm=roulementDesTours(player,1,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     MenuDirection(False, False, True, False)  # droite
 
 
 def b22(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -737,8 +759,13 @@ def b22(player):
 
 
 def b23(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,1,False,0)
+    gm=roulementDesTours(player,1,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, True, False, True)  # gauche bas
     if acc == '4':
         b22(player)
@@ -746,6 +773,7 @@ def b23(player):
 
 
 def c23(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -755,6 +783,7 @@ def c23(player):
 
 
 def d23(player):
+    clear_aff()
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, True, False)  # haut droite
@@ -764,6 +793,7 @@ def d23(player):
 
 
 def d24(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -773,6 +803,7 @@ def d24(player):
 
 
 def d25(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(True, False, False, True)  # haut gauche
@@ -782,8 +813,13 @@ def d25(player):
 
 
 def c25(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,1,False,0)
+    gm=roulementDesTours(player,1,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
         d25(player)
@@ -791,6 +827,7 @@ def c25(player):
 
 
 def b25(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -800,8 +837,13 @@ def b25(player):
 
 
 def a25(player):  # end of road
+    clear_aff()
     random_area()
-    roulementDesTours(player,1,False,0)
+    gm=roulementDesTours(player,1,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
         b25(player)
@@ -829,12 +871,18 @@ def map2(player):
 #########################################################   MAP3
 
 def c31(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,2,False,0)
+    gm=roulementDesTours(player,2,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     MenuDirection(False, False, True, False)
 
 
 def c32(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)
@@ -844,6 +892,7 @@ def c32(player):
 
 
 def c33(player):
+    clear_aff()
     random_area()
     # event
     acc = MenuDirection(True, False, False, True)
@@ -853,6 +902,7 @@ def c33(player):
 
 
 def b33(player):
+    clear_aff()
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
@@ -862,8 +912,13 @@ def b33(player):
 
 
 def a33(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,2,False,0)
+    gm=roulementDesTours(player,2,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
         b33(player)
@@ -886,12 +941,18 @@ def map3(player):
 #########################################################   MAP4
 
 def b41(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,3,False,0)
+    gm=roulementDesTours(player,3,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     MenuDirection(False, False, True, False)  # droite
 
 
 def b42(player):
+    clear_aff()
     random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -901,6 +962,7 @@ def b42(player):
 
 
 def b43(player):
+    clear_aff()
     random_area()
     # event
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -910,8 +972,13 @@ def b43(player):
 
 
 def b44(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,3,False,0)
+    gm=roulementDesTours(player,3,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, False, True)  # haut bas gauche
     if acc == '4':
         b43(player)
@@ -928,8 +995,13 @@ def a44(player):
 
 
 def c44(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,3,False,0)
+    gm=roulementDesTours(player,3,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '1':
         b44(player)
@@ -937,6 +1009,7 @@ def c44(player):
 
 
 def d44(player):
+    clear_aff()
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -946,6 +1019,7 @@ def d44(player):
 
 
 def e44(player):  # end of road
+    clear_aff()
     random_area()
     # event3
     acc = MenuDirection(True, True, False, False)  # haut bas
@@ -972,14 +1046,20 @@ def map4(player):
 #########################################################   MAP5
 
 def b51(player):
+    clear_aff()
     random_area()
     # event
     MenuDirection(False, False, True, False)  # droite
 
 
 def b52(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
         b51(player)
@@ -987,6 +1067,7 @@ def b52(player):
 
 
 def b53(player):
+    clear_aff()
     random_area()
     # event
     acc = MenuDirection(False, False, True, True)  # gauche droite
@@ -996,8 +1077,13 @@ def b53(player):
 
 
 def b54(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
         b53(player)
@@ -1005,6 +1091,7 @@ def b54(player):
 
 
 def b55(player):
+    clear_aff()
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, False, True)  # gauche haut
@@ -1014,8 +1101,13 @@ def b55(player):
 
 
 def a55(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
         b55(player)
@@ -1023,8 +1115,13 @@ def a55(player):
 
 
 def mb55(player):  # end of road
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
         a55(player)
@@ -1049,14 +1146,21 @@ def map5(player):
 #########################################################   MAP6
 
 def c61(player):
+    clear_aff()
     random_area()
     # event
     MenuDirection(True, False, False, False)
 
 
 def b61(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
+
     acc = MenuDirection(False, True, True, False)
     if acc == '2':
         c61(player)
@@ -1064,6 +1168,7 @@ def b61(player):
 
 
 def b62(player):
+    clear_aff()
     random_area()
     # event
     acc = MenuDirection(False, False, True, True)
@@ -1073,8 +1178,13 @@ def b62(player):
 
 
 def b63(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, True, False, True)
     if acc == '4':
         b62(player)
@@ -1082,6 +1192,7 @@ def b63(player):
 
 
 def c63(player):
+    clear_aff()
     random_area()
     # event
     acc = MenuDirection(True, True, False, False)
@@ -1091,8 +1202,13 @@ def c63(player):
 
 
 def d63(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(True, True, True, False)
     if acc == '1':
         c63(player)
@@ -1102,6 +1218,7 @@ def d63(player):
 
 
 def e63(player):  # special path
+    clear_aff()
     random_area()
     ajoutPotion(player, "soin")
     MenuDirection(True, False, False, False)
@@ -1109,8 +1226,13 @@ def e63(player):  # special path
 
 
 def d64(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
         d63(player)
@@ -1118,6 +1240,7 @@ def d64(player):
 
 
 def d65(player):
+    clear_aff()
     random_area()
     # event
     acc = MenuDirection(True, True, False, True)
@@ -1129,13 +1252,19 @@ def d65(player):
 
 
 def e65(player):  # special path
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     MenuDirection(True, False, False, False)
     d65(player)
 
 
 def c65(player):
+    clear_aff()
     random_area()
     # event
     acc = MenuDirection(True, True, False, False)
@@ -1145,6 +1274,7 @@ def c65(player):
 
 
 def b65(player):
+    clear_aff()
     random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
@@ -1154,8 +1284,13 @@ def b65(player):
 
 
 def a65(player):
+    clear_aff()
     random_area()
-    roulementDesTours(player,4,False,0)
+    gm=roulementDesTours(player,4,False,0)
+    if gm=="G-0":
+        print("Game Over - Trop faible pour ce jeu ?")
+        briller()
+        sys.exit()
     acc = MenuDirection(False, True, True, False)
     if acc == '2':
         b65(player)
@@ -1163,6 +1298,7 @@ def a65(player):
 
 
 def a66(player):
+    clear_aff()
     random_area()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -1191,9 +1327,15 @@ def map6(player):
 
 
 def boss(player):
+    i=0
     print("Devant vous se présente le grand fléau de 2020, l'Horrible Corvid et il vous agresse, préparez vous a riposter !")
     while i<3:
-        roulementDesTours(player, 4, True, i)
+        gm=roulementDesTours(player, 4, True, i)
+        if gm=="G-0":
+            print("Game Over - Trop faible pour ce jeu ?")
+            briller()
+            sys.exit()
         i+=1
+    felicitation()
 
 menu()
