@@ -464,7 +464,7 @@ def attaqueIa(mokeponEnnemi, player):  # Si l'ennemi attaque, enleve les pts au 
     else:
         print("error")
     if player["mokepon"]["hp"] <= 0:
-        return "G-O"
+        return "G-0"
     else:
         return "good"
 
