@@ -6,8 +6,8 @@ import time
 import webbrowser
 from colorama import init,Fore, Back, Style
 import pickle
+from tqdm import tqdm
 
-#finir save // faire sénar // finir script // pd //
 
 def printsave():
     print("-----------------------------------------------------\n | Appuyez sur | s - Pour Sauvegarder | q - Pour quitter | ")
@@ -37,6 +37,13 @@ def menu():
     elif chx == '2':
         player = pickle.load(open("save.p", "rb"))
         progress = player["position"]
+        #barre
+        blc = tqdm(total = 69420, position=0, leave=False)
+        for j in range(69420):
+            blc.set_description("... Votre partie charge ...".format(j))
+            blc.update(1)
+        blc.close()
+        #fin barre
         game(player,progress)
     elif chx == '3':
         about()
@@ -49,7 +56,7 @@ def print_slow(txt):
     for x in txt:
         print(x, end='', flush=True) #affiche lettre par letre le str
         time.sleep(0.015)
-    print()#retour a la ligne
+    print() #retour a la ligne
 
 def about():
     print_slow("Ce jeu est developpé par Antoine Azevedo Da Silva et Stanley Jamais dans le cadre du projet python pour l'école Hetic. Il reprend les bases que les jeux pokémons on pu introduire, surtout ceux de gameboy. \n L'histoire est assez comique nous essayerons de vous faire venir à bout du Covid avec des monstres aux noms comiques.\n Si jamais vous voulez nous faire savoir votre retour n'hésitez pas à nous contacter par le mail étudiant de l'école.\n Nous vous souhaitons une agréable partie et une bonne dose de rire :).")
@@ -62,24 +69,24 @@ def maping(player,val):
 
         map1(player)  # changer player pos a chaques map
         menusave(player)
-    if val == 2:
+    elif val == 2:
         map2(player)
-    if val == 3:
+    elif val == 3:
         map3(player)
-    if val == 4:
+    elif val == 4:
         print("Bienvenue a Honk Ponk, une boutique est disponible souhaitez vous y  aller \n o - Oui n - Non//")
         chx = int(input())
         # if chx == "o":
         map4(player)
-    if val == 5:
+    elif val == 5:
         map5(player)
-    if val == 6:
+    elif val == 6:
         map6(player)
-    if val == 7:
+    elif val == 7:
         boss(player)
 
-    else:
-        print("error")
+    elif val !=1 or val !=2 or val !=3 or val !=4 or val !=5 or val !=6 or val !=7:
+        print("error 404")
 
 def game(player,progress):
 
@@ -92,14 +99,23 @@ def game(player,progress):
     else:
         maping(player,progress)
 
-
-# faire le load
-
+def random_area():
+    value=["Vous pénétrez dans la foret attention à vos miches","Vous y trouver un tunnel et vous y glissez !",
+           "Vous appercevez une silhouette au loin, vous décidez de la rattraper",
+           "Cette coline semble donner un point de vue interessant, allez y.",
+           "Cette sombre crevasse semble dangeureuse, j'espère pour vous qu'il n'y a pas de pythons en bas",
+           "Une ville abandonnée du nom de Woolhanne se dresse devant vous, faites attention !",
+           "Un pont suspendu est droit devant faites gaffe a vos pas pour pas faire craquer le pont",
+           "Une incroyable cascade d'eau vous apparait, ne glissez pas sur les rochers"]
+    i=random.randint(0,6)
+    print(value[i])
+    print("---------------------------")
+    time.sleep(1)
 
 def intro(name):  # OK
     print("Bienvenue à toi", name,
           "!\nTon aventure ne fais que de commencer et pourtant nous comptons déjà sur toi car aujourd'hui dans le monde des moképon sévis une atroce maladie véhiculé par un bandit de la région, l'horrible Corvid.\nPour t'aider dans ta quête afin de sauver notre monde, je vais t'offrir ton premier moképon ! \nChoisis le bien, ils ont tous leurs forces et faiblesses et tu ne pourra pas le changer une fois ton choix fait.")
-    #51time.sleep(5)
+    time.sleep(1)
 
 
 # Inventaire Du joueur
@@ -112,7 +128,7 @@ def creationJoueurs():  # Crée le joueur, donne son nom, son argent, son invent
     player["inventaire"]["soin"] = 5
     player["inventaire"]["attaque"] = 5
     player["inventaire"]["defense"] = 5
-    player["position"] = 1
+    player["position"] = 0
     player["name"] = str(input("Quel est ton nom ?"))
     intro(player.get("name"))
     player["mokepon"] = mokeponChoice(mokepon)
@@ -207,6 +223,7 @@ def interactionEnnemi():  # Genere un phrase de provoque de l'ia adverse
                        "Oh, toi. Je vais t'en faire baver!"]
     print(nomDres[random.randint(0, (len(nomDres) - 1))], '- "',
           MiseEnGardeDres[random.randint(0, (len(MiseEnGardeDres) - 1))], '"')
+
 
 
 # magasin (base) & auberge
@@ -593,7 +610,7 @@ def MenuDirection(n, s, e, w):
     if w == True:
         print("4 : Gauche")
 
-    print("--------------------")
+    print("---------------------------")
     direc = input()
 
     if n == False and direc == '1':
@@ -625,13 +642,12 @@ def MenuDirection(n, s, e, w):
 #########################################################   MAP1
 
 def a11(player):
-    print("#1#")
-
+    random_area()
     MenuDirection(False, False, True, False)
 
 
 def a12(player):
-    print("#2#")
+    random_area()
     roulementDesTours(player,0,False,0)
 
     acc = MenuDirection(False, False, True, True)
@@ -641,7 +657,7 @@ def a12(player):
 
 
 def a13(player):
-    print("#3#")
+    random_area()
     ajoutPotion(player, "soin")
 
     acc = MenuDirection(False, True, False, True)
@@ -651,7 +667,7 @@ def a13(player):
 
 
 def b13(player):
-    print("#4#")
+    random_area()
     # event ?
 
     acc = MenuDirection(True, True, False, False)
@@ -661,7 +677,7 @@ def b13(player):
 
 
 def c13(player):
-    print("#5#")
+    random_area()
     roulementDesTours(player,0,False,0)
     1
     acc = MenuDirection(True, False, True, False)
@@ -671,7 +687,7 @@ def c13(player):
 
 
 def c14(player):
-    print("#6#")
+    random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -680,7 +696,7 @@ def c14(player):
 
 
 def c15(player):
-    print("#7#")
+    random_area()
     roulementDesTours(player,0,False,0)
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -706,13 +722,13 @@ def map1(player):
 #########################################################   MAP2
 
 def b21(player):
-    print("#1#")
+    random_area()
     roulementDesTours(player,1,False,0)
     MenuDirection(False, False, True, False)  # droite
 
 
 def b22(player):
-    print("#2#")
+    random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -721,7 +737,7 @@ def b22(player):
 
 
 def b23(player):
-    print("#3#")
+    random_area()
     roulementDesTours(player,1,False,0)
     acc = MenuDirection(False, True, False, True)  # gauche bas
     if acc == '4':
@@ -730,7 +746,7 @@ def b23(player):
 
 
 def c23(player):
-    print("#4#")
+    random_area()
     # event ?
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '1':
@@ -739,7 +755,7 @@ def c23(player):
 
 
 def d23(player):
-    print("#5#")
+    random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, True, False)  # haut droite
     if acc == '1':
@@ -748,7 +764,7 @@ def d23(player):
 
 
 def d24(player):
-    print("#6#")
+    random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -757,7 +773,7 @@ def d24(player):
 
 
 def d25(player):
-    print("#7#")
+    random_area()
     # event ?
     acc = MenuDirection(True, False, False, True)  # haut gauche
     if acc == '4':
@@ -766,7 +782,7 @@ def d25(player):
 
 
 def c25(player):
-    print("#8#")
+    random_area()
     roulementDesTours(player,1,False,0)
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -775,7 +791,7 @@ def c25(player):
 
 
 def b25(player):
-    print("#9#")
+    random_area()
     # event ?
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -784,7 +800,7 @@ def b25(player):
 
 
 def a25(player):  # end of road
-    print("#10#")
+    random_area()
     roulementDesTours(player,1,False,0)
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -813,13 +829,13 @@ def map2(player):
 #########################################################   MAP3
 
 def c31(player):
-    print("#1#")
+    random_area()
     roulementDesTours(player,2,False,0)
     MenuDirection(False, False, True, False)
 
 
 def c32(player):
-    print("#2#")
+    random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -828,7 +844,7 @@ def c32(player):
 
 
 def c33(player):
-    print("#3#")
+    random_area()
     # event
     acc = MenuDirection(True, False, False, True)
     if acc == '4':
@@ -837,7 +853,7 @@ def c33(player):
 
 
 def b33(player):
-    print("#4#")
+    random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
@@ -846,7 +862,7 @@ def b33(player):
 
 
 def a33(player):
-    print("#5#")
+    random_area()
     roulementDesTours(player,2,False,0)
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
@@ -870,13 +886,13 @@ def map3(player):
 #########################################################   MAP4
 
 def b41(player):
-    print("#1#")
+    random_area()
     roulementDesTours(player,3,False,0)
     MenuDirection(False, False, True, False)  # droite
 
 
 def b42(player):
-    print("#2#")
+    random_area()
     # event ?
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -885,7 +901,7 @@ def b42(player):
 
 
 def b43(player):
-    print("#3#")
+    random_area()
     # event
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -894,7 +910,7 @@ def b43(player):
 
 
 def b44(player):
-    print("#4#")
+    random_area()
     roulementDesTours(player,3,False,0)
     acc = MenuDirection(True, True, False, True)  # haut bas gauche
     if acc == '4':
@@ -905,14 +921,14 @@ def b44(player):
 
 
 def a44(player):
-    print("#5#")
+    random_area()
     rickroll()
     MenuDirection(False, True, False, False)  # bas
     b44(player)
 
 
 def c44(player):
-    print("#6#")
+    random_area()
     roulementDesTours(player,3,False,0)
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '1':
@@ -921,7 +937,7 @@ def c44(player):
 
 
 def d44(player):
-    print("#7#")
+    random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '1':
@@ -930,7 +946,7 @@ def d44(player):
 
 
 def e44(player):  # end of road
-    print("#8#")
+    random_area()
     # event3
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '1':
@@ -956,13 +972,13 @@ def map4(player):
 #########################################################   MAP5
 
 def b51(player):
-    print("#1#")
+    random_area()
     # event
     MenuDirection(False, False, True, False)  # droite
 
 
 def b52(player):
-    print("#2#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -971,7 +987,7 @@ def b52(player):
 
 
 def b53(player):
-    print("#3#")
+    random_area()
     # event
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -980,7 +996,7 @@ def b53(player):
 
 
 def b54(player):
-    print("#4#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(False, False, True, True)  # gauche droite
     if acc == '4':
@@ -989,7 +1005,7 @@ def b54(player):
 
 
 def b55(player):
-    print("#5#")
+    random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, False, False, True)  # gauche haut
     if acc == '4':
@@ -998,7 +1014,7 @@ def b55(player):
 
 
 def a55(player):
-    print("#6#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -1007,7 +1023,7 @@ def a55(player):
 
 
 def mb55(player):  # end of road
-    print("#7#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(True, True, False, False)  # haut bas
     if acc == '2':
@@ -1033,13 +1049,13 @@ def map5(player):
 #########################################################   MAP6
 
 def c61(player):
-    print("#1#")
+    random_area()
     # event
     MenuDirection(True, False, False, False)
 
 
 def b61(player):
-    print("#2#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(False, True, True, False)
     if acc == '2':
@@ -1048,7 +1064,7 @@ def b61(player):
 
 
 def b62(player):
-    print("#3#")
+    random_area()
     # event
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -1057,7 +1073,7 @@ def b62(player):
 
 
 def b63(player):
-    print("#4#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(False, True, False, True)
     if acc == '4':
@@ -1066,7 +1082,7 @@ def b63(player):
 
 
 def c63(player):
-    print("#5#")
+    random_area()
     # event
     acc = MenuDirection(True, True, False, False)
     if acc == '1':
@@ -1075,7 +1091,7 @@ def c63(player):
 
 
 def d63(player):
-    print("#6#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(True, True, True, False)
     if acc == '1':
@@ -1086,14 +1102,14 @@ def d63(player):
 
 
 def e63(player):  # special path
-    print("#7#")
+    random_area()
     ajoutPotion(player, "soin")
     MenuDirection(True, False, False, False)
     d63(player)
 
 
 def d64(player):
-    print("#8#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
@@ -1102,7 +1118,7 @@ def d64(player):
 
 
 def d65(player):
-    print("#9#")
+    random_area()
     # event
     acc = MenuDirection(True, True, False, True)
     if acc == '4':
@@ -1113,14 +1129,14 @@ def d65(player):
 
 
 def e65(player):  # special path
-    print("#10#")
+    random_area()
     roulementDesTours(player,4,False,0)
     MenuDirection(True, False, False, False)
     d65(player)
 
 
 def c65(player):
-    print("#11#")
+    random_area()
     # event
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
@@ -1129,7 +1145,7 @@ def c65(player):
 
 
 def b65(player):
-    print("#12#")
+    random_area()
     ajoutPotion(player, "soin")
     acc = MenuDirection(True, True, False, False)
     if acc == '2':
@@ -1138,7 +1154,7 @@ def b65(player):
 
 
 def a65(player):
-    print("#13#")
+    random_area()
     roulementDesTours(player,4,False,0)
     acc = MenuDirection(False, True, True, False)
     if acc == '2':
@@ -1147,7 +1163,7 @@ def a65(player):
 
 
 def a66(player):
-    print("#14#")
+    random_area()
     acc = MenuDirection(False, False, True, True)
     if acc == '4':
         a65(player)
@@ -1175,6 +1191,7 @@ def map6(player):
 
 
 def boss(player):
+    print("Devant vous se présente le grand fléau de 2020, l'Horrible Corvid et il vous agresse, préparez vous a riposter !")
     while i<3:
         roulementDesTours(player, 4, True, i)
         i+=1
