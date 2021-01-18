@@ -15,5 +15,10 @@ Il se pourrait que Windows Defender détecte le programme comme malveillant, car
 si vous tenez à vérifier ce que le ".bat" fait, ouvrez-le avec un éditeur de texte.
 ***
 ## Contributeurs :
-Azevedo Da Silva "DestCom" Antoine - https://destroykeaum.alwaysdata.net/ 
-Jamais Stanley - https://www.linkedin.com/in/stanley-jamais-138a991a9/
+#### Créateur:  
+Azevedo Da Silva "DestCom" Antoine - https://destroykeaum.alwaysdata.net/   
+Jamais Stanley - https://www.linkedin.com/in/stanley-jamais-138a991a9/   
+#### Beta Testeur :
+Indranathan Abisan  
+Rodrigues Johann  
+Gunes Cagdas
