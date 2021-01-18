@@ -404,6 +404,12 @@ def addXp(player, mokeponEnnemi):  # Ajoute l'xp au mokepon
     print("Il a désormais", player["mokepon"]["xp"], "point d'xp !")
     while (player["mokepon"]["xp"] >= player["mokepon"]["xpmax"]):
         monteeXp(player)
+        if (player["mokepon"]["niveau"] == 16):
+               augmentationStats(player, 0)
+        if (player["mokepon"]["niveau"] == 36):
+               augmentationStats(player, 1)
+        if (player["mokepon"]["niveau"] == 40):
+               augmentationStats(player, 2)
         print("Super! ton", player["mokepon"]["name"], "est passé niveau", player["mokepon"]["niveau"], "!")
 
 
@@ -497,12 +503,6 @@ def attaqueJoueurs(player,
     if mokeponEnnemi["hp"] <= 0:
         if ((player["mokepon"]["niveau"] + 1) <= player["mokepon"]["niveaumax"]):
             addXp(player, mokeponEnnemi)
-            if (player["mokepon"]["niveau"] == 16):
-                augmentationStats(player, 0)
-            if (player["mokepon"]["niveau"] == 36):
-                augmentationStats(player, 1)
-            if (player["mokepon"]["niveau"] == 40):
-                augmentationStats(player, 2)
             print("Ce combat t'as fait gagné", monnaieGagner(player), "Mokedollars !")
         return "IA-Dead"
     else:
