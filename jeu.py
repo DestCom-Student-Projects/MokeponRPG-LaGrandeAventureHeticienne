@@ -76,7 +76,7 @@ def maping(player,val):
         map2(player)
         menusave(player)
         val+=1
-        magasinChoixbeta(player)
+        magasinChoix(player)
     
     if val == 3:
         map3(player)
@@ -277,14 +277,17 @@ def auberge(player):  # Soigne le pokemon de 20pv
 
 
 # magasin beta
-def magasinChoixbeta(player):  # Propose l'achat de potion
+
+def magasinChoix(player):  # Propose l'achat de potion
     key=True
-    while key==True:
-        verificationKey2 = 0
-        potion = "none"
-        print("Tu possède", player["argent"], "crédits")
+    print("Tu possède", player["argent"], "crédits")
         print(
             "La potion de vie redonne 20 HP a ton mokepon, son prix est de 200 MokeDollars !\nLa potion d'attaque donne 5 points d'attaque temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nLa potion de défense donne 5 points de defense temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nQue desirez-vous faire  ?")
+
+    while key==True:
+        verificationKey2 = 0
+        
+        potion = "none"
         achatPotion(player, choixPotion())
         rachat = input("Ce sera tout ? o - oui / n - non\n")
         if rachat == 'n':
@@ -296,22 +299,6 @@ def magasinChoixbeta(player):  # Propose l'achat de potion
     return player
 
 # Initiation du magasin
-def magasinChoix(player):  # Propose l'achat de potion
-    verificationKey2 = 0
-    potion = "none"
-    print("Tu possède", player["argent"], "crédits")
-    print(
-        "La potion de vie redonne 20 HP a ton mokepon, son prix est de 200 MokeDollars !\nLa potion d'attaque donne 5 points d'attaque temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nLa potion de défense donne 5 points de defense temporaire en plus a ton mokepon, son prix est de 200 MokeDollars !\nQue desirez-vous faire  ?")
-    achatPotion(player, choixPotion())
-    while verificationKey2 == 0:
-        rachat = input("Ce sera tout ? o - oui / n - non\n")
-        if rachat == 'n':
-            magasinChoix(player)
-        elif rachat == 'o':
-            verificationKey2 = 1
-            return player
-        else:
-            verificationKey2 = 0
 
 
 # Choix de la potion a acheter
