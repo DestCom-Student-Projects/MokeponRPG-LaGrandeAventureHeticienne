@@ -1,5 +1,5 @@
 # Mokepon RPG
-## La Grande Aventure Heticienne
+## La Grande Aventure Héticienne
 ***
 ## Prérequis:
 Vous aurez besoin de Python 3.8.7 (ou plus récent) et des modules :
