@@ -437,14 +437,16 @@ def attaqueMokepon(mokeponCible, valAttaque, valDefense,
     if ((rnd >= 0) and (rnd <= 5)):
         puissanceAtk = int(critique(valAttaque, percentOne) - valDefense)
         mokeponCible = int(mokeponCible - puissanceAtk)
-        print("COUP CRITIQUE !", nameAttaquant, " attaque de ", puissanceAtk, " points !")
+        print("COUP CRITIQUE !")
     elif ((rnd >= 95) and (rnd <= 100)):
         print("L'attaque a échoué !")
         return mokeponCible
     else:
         puissanceAtk = int(valAttaque - valDefense)
         mokeponCible = int(mokeponCible - puissanceAtk)
-        print(nameAttaquant, " attaque de ", puissanceAtk, " points !")
+    if(puissanceAtk <= 0):
+        puissanceAtk = 5
+    print(nameAttaquant, " attaque de ", puissanceAtk, " points !")
     return mokeponCible
 
 
