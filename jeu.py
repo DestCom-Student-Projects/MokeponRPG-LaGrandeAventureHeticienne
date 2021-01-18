@@ -572,7 +572,7 @@ def roulementDesTours(player, niv, boss,mobBoss):  # Fct qui declenche un combat
         textApparitionEnnemi(mokeponEnnemi)
     affichagePV(player, mokeponEnnemi, False)
 
-    while death != "G-O" and death != "IA-Dead" and death != 'run':
+    while death != "G-0" and death != "IA-Dead" and death != 'run':
 
         # Roulement des tours
         if (tours % 2) == 0:  # Si pair -> Ennemi joue
@@ -581,9 +581,9 @@ def roulementDesTours(player, niv, boss,mobBoss):  # Fct qui declenche un combat
             death = attaqueIa(mokeponEnnemi, player)
             affichagePV(player, mokeponEnnemi, True)
             verificationKeyCJ = 1
-            if death == "G-O":
+            if death == "G-0":
                 print(Style.RESET_ALL)
-                return "G-O"
+                return "G-0"
         else:  # Si impair -> joueur attaque
             # Menu du choix de l'action du joueur
             while verificationKeyCJ == 1:
