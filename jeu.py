@@ -66,24 +66,35 @@ def about():
     menu()
 
 def maping(player,val):
-
+    token=True
     if val == 1:
 
         map1(player)  # changer player pos a chaques map
         menusave(player)
     elif val == 2:
         map2(player)
+        magasinChoix(player)
     elif val == 3:
         map3(player)
     elif val == 4:
         print("Bienvenue a Honk Ponk, une boutique est disponible souhaitez vous y  aller \n o - Oui n - Non//")
         chx = int(input())
-        # if chx == "o":
+        while token==True:
+            if chx == "o":
+            magasinChoix(player)
+            token=False
+            elif chx =="n":
+            print("Vous continuez votre chemin.")
+            token=False
+            else:
+            print("Quoi ? Je n'ai pas compris ?")
+        
         map4(player)
     elif val == 5:
         map5(player)
     elif val == 6:
         map6(player)
+        magasinChoix(player)
     elif val == 7:
         boss(player)
 
