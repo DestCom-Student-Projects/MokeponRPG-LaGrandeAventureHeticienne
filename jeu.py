@@ -427,6 +427,7 @@ def augmentationStats(player, evo):  # Amelioration des stats du mokepon suite a
     player["mokepon"]["vitessemax"] = listVit[evo]
     player["mokepon"]["defense"] = listDfs[evo]
     player["mokepon"]["defensemax"] = listDfs[evo]
+    print("Félicitation, ton moképon évolue niveau", player["mokepon"]["niveau"], "il a desormais", player["mokepon"]["attaque"], "point d'attaques",player["mokepon"]["defense"], "points de défense et ",player["mokepon"]["hp"], "points de vie")
 
 
 def attaqueMokepon(mokeponCible, valAttaque, valDefense,
