@@ -119,7 +119,7 @@ def game(player,progress):
             maping(player,i)
             i+=1
     else:
-        maping(player,progress)
+        maping(player,progress+1)
 
 def random_area():
     value=["Vous pénétrez dans la foret attention à vos miches","Vous y trouver un tunnel et vous y glissez !",
