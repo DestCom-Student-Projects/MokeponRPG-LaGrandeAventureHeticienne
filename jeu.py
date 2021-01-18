@@ -9,6 +9,10 @@ import pickle
 from tqdm import tqdm
 
 
+def clear_aff():
+    os.system('cls' if os.name=='nt' else 'clear')
+
+
 def printsave():
     print("-----------------------------------------------------\n | Appuyez sur | s - Pour Sauvegarder | q - Pour quitter | ")
 
@@ -23,7 +27,26 @@ def menusave(player):
         return val
 
 def menu():
-    print("                  Moképon RPG :                      ")
+    print("MMMMMMMM               MMMMMMMM                 kkkkkkkk                        e                                                                                    RRRRRRRRRRRRRRRRR   PPPPPPPPPPPPPPPPP           GGGGGGGGGGGGG ")
+    print("M:::::::M             M:::::::M                 k::::::k                      e::e                                                                                   R::::::::::::::::R  P::::::::::::::::P       GGG::::::::::::G")
+    print("M::::::::M           M::::::::M                 k::::::k                     e::e                                                                                   R::::::RRRRRR:::::R P::::::PPPPPP:::::P    GG:::::::::::::::G")
+    print("M:::::::::M         M:::::::::M                 k::::::k                    e::e                                                                                     RR:::::R     R:::::RPP:::::P     P:::::P  G:::::GGGGGGGG::::G")
+    print("M::::::::::M       M::::::::::M   ooooooooooo    k:::::k    kkkkkkk    eeeeeeeeeeee    ppppp   ppppppppp      ooooooooooo   nnnn  nnnnnnnn    nnnn  nnnnnnnn           R::::R     R:::::R  P::::P     P:::::P G:::::G       GGGGGG")
+    print("M:::::::::::M     M:::::::::::M oo:::::::::::oo  k:::::k   k:::::k   ee::::::::::::ee  p::::ppp:::::::::p   oo:::::::::::oo n:::nn::::::::nn  n:::nn::::::::nn         R::::R     R:::::R  P::::P     P:::::PG:::::G              ")
+    print("M:::::::M::::M   M::::M:::::::Mo:::::::::::::::o k:::::k  k:::::k   e::::::eeeee:::::eep:::::::::::::::::p o:::::::::::::::on::::::::::::::nn n::::::::::::::nn        R::::RRRRRR:::::R   P::::PPPPPP:::::P G:::::G              ")
+    print("M::::::M M::::M M::::M M::::::Mo:::::ooooo:::::o k:::::k k:::::k   e::::::e     e:::::epp::::::ppppp::::::po:::::ooooo:::::onn:::::::::::::::nnn:::::::::::::::n       R:::::::::::::RR    P:::::::::::::PP  G:::::G    GGGGGGGGGG")
+    print("M::::::M  M::::M::::M  M::::::Mo::::o     o::::o k::::::k:::::k    e:::::::eeeee::::::e p:::::p     p:::::po::::o     o::::o  n:::::nnnn:::::n  n:::::nnnn:::::n       R::::RRRRRR:::::R   P::::PPPPPPPPP    G:::::G    G::::::::G")
+    print("M::::::M   M:::::::M   M::::::Mo::::o     o::::o k:::::::::::k     e:::::::::::::::::e  p:::::p     p:::::po::::o     o::::o  n::::n    n::::n  n::::n    n::::n       R::::R     R:::::R  P::::P            G:::::G    GGGGG::::G")
+    print("M::::::M    M:::::M    M::::::Mo::::o     o::::o k:::::::::::k     e::::::eeeeeeeeeee   p:::::p     p:::::po::::o     o::::o  n::::n    n::::n  n::::n    n::::n       R::::R     R:::::R  P::::P            G:::::G        G::::G")
+    print("M::::::M     MMMMM     M::::::Mo::::o     o::::o k::::::k:::::k    e:::::::e            p:::::p    p::::::po::::o     o::::o  n::::n    n::::n  n::::n    n::::n       R::::R     R:::::R  P::::P             G:::::G       G::::G")
+    print("M::::::M               M::::::Mo:::::ooooo:::::ok::::::k k:::::k   e::::::::e           p:::::ppppp:::::::po:::::ooooo:::::o  n::::n    n::::n  n::::n    n::::n     RR:::::R     R:::::RPP::::::PP            G:::::GGGGGGGG::::G")
+    print("M::::::M               M::::::Mo:::::::::::::::ok::::::k  k:::::k   e::::::::eeeeeeee   p::::::::::::::::p o:::::::::::::::o  n::::n    n::::n  n::::n    n::::n     R::::::R     R:::::RP::::::::P             GG:::::::::::::::G")
+    print("M::::::M               M::::::M oo:::::::::::oo k::::::k   k:::::k   ee:::::::::::::e   p::::::::::::::pp   oo:::::::::::oo   n::::n    n::::n  n::::n    n::::n     R::::::R     R:::::RP::::::::P               GGG::::::GGG:::G")
+    print("MMMMMMMM               MMMMMMMM   ooooooooooo   kkkkkkkk    kkkkkkk    eeeeeeeeeeeeee   p::::::pppppppp       ooooooooooo     nnnnnn    nnnnnn  nnnnnn    nnnnnn     RRRRRRRR     RRRRRRRPPPPPPPPPP                  GGGGGG   GGGG")
+    print("                                                                                        p:::::p                                                                                                                                   ")
+    print("                                                                                        p:::::p                                                                                                                                   ")
+    print("                                                                                       p:::::::p                                                                                                                                  ")
+    print("                                                                                       ppppppppp                                                                                                                                 ")
     print("-----------------------------------------------------")
     print("          1 : Crée une nouvelle partie               ")
     print("          2 : Charger votre partie                   ")
