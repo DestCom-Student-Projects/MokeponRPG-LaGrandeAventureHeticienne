@@ -70,15 +70,15 @@ def maping(player,val):
     if val == 1:
         map1(player)  # changer player pos a chaques map
         val+=1
-        menusave(player)
-    elif val == 2:
+    menusave(player)
+    if val == 2:
         map2(player)
         val+=1
         magasinChoix(player)
-    elif val == 3:
+    if val == 3:
         map3(player)
         val+=1
-    elif val == 4:
+    if val == 4:
         print("Bienvenue a Honk Ponk, une boutique est disponible souhaitez vous y  aller \n o - Oui n - Non//")
         chx = input()
         while token==True:
@@ -93,17 +93,19 @@ def maping(player,val):
         
         map4(player)
         val+=1
-    elif val == 5:
+    menusave(player)
+    if val == 5:
         map5(player)
         val+=1
-    elif val == 6:
+    if val == 6:
         map6(player)
         val+=1
         magasinChoix(player)
-    elif val == 7:
+    menusave(player)
+    if val == 7:
         boss(player)
 
-    elif val !=1 or val !=2 or val !=3 or val !=4 or val !=5 or val !=6 or val !=7:
+    if val !=1 or val !=2 or val !=3 or val !=4 or val !=5 or val !=6 or val !=7:
         print("error 404")
 
 def game(player,progress):
