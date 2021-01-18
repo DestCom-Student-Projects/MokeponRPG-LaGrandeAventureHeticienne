@@ -605,7 +605,7 @@ def roulementDesTours(player, niv, boss,mobBoss):  # Fct qui declenche un combat
         # Roulement des tours
         if (tours % 2) == 0:  # Si pair -> Ennemi joue
             print(Style.RESET_ALL)
-            print('\033[34m')
+            print('\033[32m')
             death = attaqueIa(mokeponEnnemi, player)
             affichagePV(player, mokeponEnnemi, True)
             verificationKeyCJ = 1
