@@ -18,7 +18,7 @@ si vous tenez à vérifier ce que le ".bat" fait, ouvrez-le avec un éditeur de 
 #### Créateur:  
 Azevedo Da Silva "DestCom" Antoine - https://destroykeaum.alwaysdata.net/   
 Jamais Stanley - https://www.linkedin.com/in/stanley-jamais-138a991a9/   
-#### Beta Testeur :
+#### Beta Testeur & Un grand merci à eu:
 Indranathan Abisan  
 Rodrigues Johann  
 Gunes Cagdas
